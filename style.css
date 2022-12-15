@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background: rgb(133, 58, 180);
+    background: linear-gradient(100deg, rgba(133, 58, 180, 1) 0%, rgba(253, 53, 29, 0.7777704831932774) 68%, rgba(252, 221, 69, 1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f1f1f1f1;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.quiz-header {
+    background-color: rgb(22, 101, 254);
+    width: 40rem;
+    height: 10rem;
+    box-shadow: 10px 0px 105px -4px rgba(0, 0, 0, 0.58);
+    -webkit-box-shadow: 10px 0px 105px -4px rgba(0, 0, 0, 0.58);
+    -moz-box-shadow: 10px 0px 105px -4px rgba(0, 0, 0, 0.58);
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+    padding: 80px;
+
+}
+
+.answer-body {
+    background-color: rgb(9, 25, 40);
+    width: 40rem;
+    height: 35rem;
+    margin: auto;
+    box-shadow: 10px 0px 105px -4px rgba(0, 0, 0, 0.58);
+    -webkit-box-shadow: 10px 0px 105px -4px rgba(0, 0, 0, 0.58);
+    -moz-box-shadow: 10px 0px 105px -4px
+}
+
+ul {
+    list-style: none;
+    font-family: 'Lora', serif;
+}
+
+li {
+    padding: 25px;
+    border: 1px solid#f1f1f1f1;
+    border-radius: 30px;
+    margin: 10px 60px;
+}
+
+li:nth-child(1) {
+    margin-top: 50px;
+    background: rgb(180, 79, 58);
+    background: linear-gradient(100deg, rgba(180, 79, 58, 1) 0%, rgba(253, 90, 29, 0.7777704831932774) 29%, rgba(252, 196, 69, 1) 100%);
+}
+
+li:nth-child(2) {
+    background: rgb(130, 58, 180);
+    background: linear-gradient(100deg, rgba(130, 58, 180, 1) 0%, rgba(203, 29, 253, 0.7777704831932774) 43%, rgba(252, 69, 228, 1) 100%);
+}
+
+
+li:nth-child(3) {
+    background: rgb(236, 32, 113);
+    background: linear-gradient(100deg, rgba(236, 32, 113, 0.7777704831932774) 68%, rgba(252, 196, 69, 1) 100%);
+
+}
+
+li:nth-child(4) {
+    background: rgb(25, 147, 218);
+    background: linear-gradient(100deg, rgba(25, 147, 218, 0.7777704831932774) 47%, rgba(69, 203, 252, 1) 100%);
+}
+
+button {
+    width: 520px;
+    padding: 25px;
+    border: 1px solid#f1f1f1f1;
+    border-radius: 30px;
+    margin: 10px 60px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    background-color: rgb(9, 25, 40);
+    color: #f1f1f1f1;
+
+}
+input:hover{
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(180, 79, 58);
+    cursor: pointer;
+}
