@@ -1,0 +1,10 @@
+Quiz App Logic:
+1) From the default question, set SUBMIT to perform two functions:
+-Decide whether answer is count right or wrong, then add it to counter
+-Act as a slide right arrow and brings in the next question.
+NB- Count of the new questions should be added to the old count.
+
+2) After the last question, a summary slide comes in.
+-It shows % of the correct count against the total question. correctCount/totalCount*100
+It'll print as ''%
+

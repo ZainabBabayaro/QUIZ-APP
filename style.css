@@ -102,3 +102,6 @@ button:hover{
     background-color: rgb(180, 79, 58);
     cursor: pointer;
 }
+li:hover{
+    cursor: pointer;
+}
