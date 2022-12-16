@@ -99,9 +99,15 @@ input:hover{
     cursor: pointer;
 }
 button:hover{
-    background-color: rgb(180, 79, 58);
+    background-color: rgb(69, 106, 15);
     cursor: pointer;
 }
 li:hover{
     cursor: pointer;
+}
+.display-score{
+    font-family: 'Raleway', sans-serif;
+    font-size:30px;
+    margin-left:100px ;
+    margin-top: 10px;
 }
