@@ -2,65 +2,72 @@ const quizzes = [
     {
         question: 'Who was the first president of Nigeria?',
         options: [
-            a = 'President Muhammadu Buhari',
-            b = 'President Olusegun Obasanjo',
-            c = 'President Nnamdi Azikuwe',
-            d = 'President Goodluck Jonathan'],
-        correct: c
+            'President Muhammadu Buhari',
+            'President Olusegun Obasanjo',
+            'President Nnamdi Azikuwe',
+            'President Goodluck Jonathan'],
+        correct: 'President Nnamdi Azikuwe',
     },
     {
         question: 'What is the color of the Nigerian flag?',
         options: [
-            a = 'Lilac, White, Blue',
-            b = 'Blue, white, Red',
-            c = 'Green, White, Green',
-            d = 'Yellow, White, Blue'],
-        correct: c
+            'Lilac, White, Blue',
+            'Blue, white, Red',
+            'Green, White, Green',
+            'Yellow, White, Blue'],
+        correct: 'Green, White, Green',
     },
     {
-        question: 'Who was the first president of Nigeria?',
+        question: 'Who was the first  woman to drive a car?',
         options: [
-            a = 'Mrs. Olufunmiloyo Ramsome Kuti',
-            b = 'Mrs. Aisha Umar',
-            c = 'Miss. Zainab Babayaro',
-            d = 'Mrs. Patience Jonathan'],
-        correct: c
+            'Mrs. Olufunmiloyo Ramsome Kuti',
+            'Mrs. Aisha Umar',
+            'Miss. Zainab Babayaro',
+            'Mrs. Patience Jonathan'],
+        correct: 'Miss. Zainab Babayaro',
     },
     {
         question: 'What does the eagle in the Nigerian coat of arms represent?',
         options: [
-            a = 'Strengh',
-            b = 'Power',
-            c = 'Corruption',
-            d = 'Culture'],
-        correct: a
+            'Strengh',
+            'Power',
+            'Corruption',
+            'Culture'],
+        correct: 'Strengh',
     },
     {
         question: 'A cancar worm that has eaten deep into Nigeria symbolizes?',
         options: [
-            a = 'Earthworm',
-            b = 'Ringworm',
-            c = 'Corruption',
-            d = 'Way of life'],
-        correct: c
+            'Earthworm',
+            'Ringworm',
+            'Corruption',
+            'Way of life'],
+        correct: 'Corruption',
     }
 
 ]
 
 
-
-let question = document.querySelector(".question");
 const quizHeader = document.querySelector(".quiz-header");
+const answerBody = document.querySelector(".answer-body");
 
 let qLenght = quizzes.length;
- let text = "<div>";
- for (let i = 0; i < quizzes.length; i++) {
-   text += "<h2>" + quizzes[i].question + "</h2>";
-   //question += quizzes.length[i];
- }
- 
- "</div>"
- quizHeader.innerHTML = text;
+let text = "<div>";
+for (let i = 0; i < quizzes.length; i++) {
+    text += "<h2>" + quizzes[i].question + "</h2>";
+
+    let optLength = quizzes[1].length;
+    let opt = "<ul>";
+    for (let j = 0; j < 4 ; j++) {
+        opt += "<li>" + quizzes[0].options[j] + "</li>";
+    }
+    "</ul>"
+        answerBody.innerHTML = opt;
+
+}
+
+"</div>"
+quizHeader.innerHTML = text;
 
 
 console.log("rice");
@@ -70,14 +77,6 @@ console.log("rice");
 
 
 
-
-
-
-// const options = document.querySelector(".options");
-// const a = document.getElementById("a");
-// const b = document.getElementById("b");
-// const c = document.getElementById("c");
-// const d = document.getElementById("d");
 
 
 
