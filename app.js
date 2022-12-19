@@ -51,23 +51,33 @@ const quizzes = [
 const quizHeader = document.querySelector(".quiz-header");
 const answerBody = document.querySelector(".answer-body");
 
-let qLenght = quizzes.length;
-let text = "<div>";
-for (let i = 0; i < quizzes.length; i++) {
-    text += "<h2>" + quizzes[i].question + "</h2>";
 
-    let optLength = quizzes[1].length;
-    let opt = "<ul>";
-    for (let j = 0; j < 4 ; j++) {
-        opt += "<li>" + quizzes[0].options[j] + "</li>";
-    }
-    "</ul>"
+
+function changeQuiz() {
+
+    let text = "<div>";
+    for (let i = 0; i < quizzes.length; i++) {
+        text += "<h2>" + quizzes[1].question + "</h2>";
+
+        // write a conditional statement to make only one question show at a time.
+
+        let opt = "<ul>";
+        for (let j = 0; j < 4; j++) {
+            opt += "<li>" + quizzes[1].options[j] + "</li>";
+
+        }
+        "</ul>"
         answerBody.innerHTML = opt;
+    }
+    "</div>"
+    quizHeader.innerHTML = text;
 
-}
+};
+changeQuiz();
 
-"</div>"
-quizHeader.innerHTML = text;
+
+
+
 
 
 console.log("rice");
