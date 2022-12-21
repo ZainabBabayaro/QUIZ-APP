@@ -29,11 +29,11 @@ const quizzes = [
     {
         question: 'What does the eagle in the Nigerian coat of arms represent?',
         options: [
-            'Strengh',
+            'Strength',
             'Power',
             'Corruption',
             'Culture'],
-        correct: 'Strengh',
+        correct: 'Strength',
     },
     {
         question: 'A cancar worm that has eaten deep into Nigeria symbolizes?',
@@ -47,40 +47,75 @@ const quizzes = [
 
 ]
 
-
-const quizHeader = document.querySelector(".quiz-header");
+let question = document.querySelector(".question");
+let options = document.querySelector('.answer-body > .options')
+let quizHeader = document.querySelector(".quiz-header");
 const answerBody = document.querySelector(".answer-body");
+const mainContainer = document.querySelector(".main-container");
+const submit = document.querySelector(".submit")
 
 
+function changeQuiz(n) {
+    const currentQuestion = quizzes[n]
 
-function changeQuiz() {
-
-    let text = "<div>";
-    for (let i = 0; i < quizzes.length; i++) {
-        text += "<h2>" + quizzes[1].question + "</h2>";
-
-        // write a conditional statement to make only one question show at a time.
-
-        let opt = "<ul>";
-        for (let j = 0; j < 4; j++) {
-            opt += "<li>" + quizzes[1].options[j] + "</li>";
-
-        }
-        "</ul>"
-        answerBody.innerHTML = opt;
-    }
-    "</div>"
-    quizHeader.innerHTML = text;
+    question.textContent = currentQuestion.question
+    options.innerHTML = ''
+    currentQuestion.options.forEach(option => {
+        options.innerHTML += `<li class="option-a">
+        <input type="radio" name="answer" onchange="selectAnswer(event)">
+            <label for="a">${option}</label>
+        </li>`
+    })
 
 };
-changeQuiz();
+
+changeQuiz(0);
+
+let noOfCorrectCounts = 0
+const answer = []
+let totalPercentage
+let counter = 0
+
+const submitAnswer = () => {
+    if (counter === quizzes.length - 1) {
+        computeTotalScore()
+
+        return
+
+    }
+
+    if (counter >= answer.length) {
+        alert('pick an option')
+        return
+    }
+
+    counter++
+    changeQuiz(counter)
+}
 
 
+const selectAnswer = (event) => {
+    const ans = event.target.nextElementSibling.textContent
+    answer.push(ans)
+    correctOpt(ans)
+
+}
+
+function correctOpt(expectedAns) {
+    if (expectedAns === quizzes[counter].correct) {
+        noOfCorrectCounts++
+    }
+}
 
 
+function computeTotalScore() {
+    totalPercentage = `This is the total score ${(noOfCorrectCounts / quizzes.length) * 100} % <br> You got ${noOfCorrectCounts} questions right <br> You failed ${quizzes.length - noOfCorrectCounts} `
+    document.getElementById('display-score').innerHTML = totalPercentage
+    document.getElementById("quiz-header").style.display = "none";
+    document.getElementById("options").style.display = "none";
+    document.getElementById("submit").style.display = "none";
+}
 
-
-console.log("rice");
 
 
 
